@@ -1,6 +1,6 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +13,22 @@
 |
 */
 
+
 $router->get('users', ['as' => 'users', 'uses' => 'UserController@getUsers']);
+
+$router->get('login', ['as' => 'login', 'uses' => 'UserController@loginPage']);
+
+$router->post('validate', ['as' => 'validate', 'uses' => 'UserController@validation']);
+
+$router->get('dashboard', ['as' => 'dashboard', 'uses' => 'UserController@dashboard']);
+
+$router->post('create', ['as' => 'create', 'uses' => 'UserController@createPage']);
+
+$router->post('create-user', ['as' => 'create-user', 'uses' => 'UserController@createUser']);
+
+$router->post('edit', ['as' => 'edit', 'uses' => 'UserController@editPage']);
+
+$router->post('update', ['as' => 'update', 'uses' => 'UserController@update']);
+
+$router->post('delete', ['as' => 'delete', 'uses' => 'UserController@delete']);
+
